@@ -1,0 +1,119 @@
+/* =====================================================
+   Estilos - CRUD5A  |  Paleta: Bandera de México
+   Verde: #006847  |  Blanco: #FFFFFF  |  Rojo: #CE1126
+   ===================================================== */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f0;
+    color: #1a1a1a;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* ── Encabezado principal ─────────────────────────── */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    color: #FFFFFF;
+
+    /* Franja tricolor horizontal */
+    background: linear-gradient(
+        to right,
+        #006847 33.33%,
+        #FFFFFF 33.33% 66.66%,
+        #CE1126 66.66%
+    );
+
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 104, 71, 0.35);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+}
+
+/* ── Contenedor de la tabla ───────────────────────── */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 24px rgba(0, 104, 71, 0.18);
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* ── Tabla ────────────────────────────────────────── */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+    font-size: 0.95rem;
+}
+
+/* ── Encabezados de columna ───────────────────────── */
+thead th,
+th {
+    background-color: #006847;
+    color: #FFFFFF;
+    padding: 0.85rem 1.2rem;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+    border: none;
+}
+
+/* Primer y último th con bordes redondeados */
+thead th:first-child { border-radius: 10px 0 0 0; }
+thead th:last-child  { border-radius: 0 10px 0 0; }
+
+/* ── Celdas de datos ──────────────────────────────── */
+td {
+    padding: 0.75rem 1.2rem;
+    border-bottom: 1px solid #e0ece6;
+    color: #2d2d2d;
+    vertical-align: middle;
+}
+
+/* ── Filas alternas ───────────────────────────────── */
+tr:nth-child(even) td {
+    background-color: #f4faf7;
+}
+
+/* ── Hover sobre filas ────────────────────────────── */
+tr:hover td {
+    background-color: #e6f3ed;
+    transition: background-color 0.2s ease;
+}
+
+/* ── Última fila sin borde inferior ───────────────── */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* ── Acento rojo: borde izquierdo en fila impar ───── */
+tr:nth-child(odd) td:first-child {
+    border-left: 4px solid #CE1126;
+}
+
+/* ── Acento verde: borde izquierdo en fila par ────── */
+tr:nth-child(even) td:first-child {
+    border-left: 4px solid #006847;
+}
+
+/* ── Pie de página ────────────────────────────────── */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.78rem;
+    color: #888;
+    letter-spacing: 0.03em;
+}
